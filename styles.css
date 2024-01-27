@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/* ----------base-------- */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    animation: fadeIn 1s;
+    font-family: 'Roboto', sans-serif;
+    font-size: 62.5%; /* 16px = 100%; 10px = 62.5% */
+    background-color: linear-gradient(180deg, #F3F3F3 0%, #FFF 0.01%, #F8F8F8 100%);
+
+    /* @media only screen and (max-width: 75em) {
+        font-size: 50%;
+    }; */
+
+    @media only screen and (max-width: 37.5em) {
+        font-size: 43.75%; /* 1rem = 7px */
+    }
+}
+
+body {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-family: inherit;
+}
+
+
+/* -------------variables------------- */
+
+:root {
+    --orange: #EC7700;
+    --white: #fff;
+    --black: #000;
+    --green: #61A60E;
+    --grey-dark: #54565A;
+    --grey-medium: #AEAEAE;
+    --grey-light : #D9D9D9;
+}
+
+/* ------------animations------------ */
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* -----------navbar--------- */
+.navbar {
+    padding: 2rem 1rem 1.3rem;
+    border-bottom: 1px solid var(--grey-light);
+
+    @media only screen and (max-width: 37.5em) {
+        width: 100%;
+        /* padding: 2rem 1.5rem 1.8rem; */
+    }
+}
+
+.navbar__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    margin: 0 auto;
+
+    @media only screen and (max-width: 37.5em) {
+        width: 100%;
+    }
+}
+
+.navbar__btns a {
+    margin-left: .8rem;
+    font-size: 1.6rem;
+    padding: 1.2rem 1.6rem;
+    border-radius: .8rem;
+
+    @media only screen and (max-width: 37.5em) {
+        /* font-size: 1.8rem;
+        padding: 1.4rem 1.6rem; */
+    }
+}
+
+.navbar__btns--login {
+    border: 1px solid var(--grey-dark);
+    transition: all .2s;
+}
+
+.navbar__btns--login:hover {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.navbar__btns--signup {
+background-color: var(--orange);
+color: var(--white);
+transition: all .2s;
+}
+
+.navbar__btns--signup:hover{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+/* -----------main---------- */
+
+.main {
+width: 100%;
+  height: 75.1rem;  
+  border-bottom: 1px solid var(--grey-medium);
+
+  @media only screen and (max-width: 37.5em) {
+    height: 100%;
+    border-bottom: none;
+  }
+}
+
+/* ----------page layout------------ */
+.page-layout {
+    position: relative;
+    width: 150rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 23rem;
+    padding: 22rem 10rem 8rem 8rem;
+
+    @media only screen and (max-width: 37.5em) {
+        flex-direction: column;
+        width: 100%;
+        padding: 6rem 2rem 3.1rem 2rem;
+        gap: 4.5rem;
+    }
+    
+}
+
+/* ------------content----------- */
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding-bottom: 5rem;
+}
+.content__heading {
+    font-size: 4.8rem;
+    font-weight: 400;
+}
+
+.content__heading span {
+    font-weight: 500;
+    color: var(--orange);
+    display: block;
+}
+
+.content__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.content__list-item {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    font-size: 2rem;
+    line-height: 3.2rem;
+}
+
+.content__checkmark {
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+.content__rating {
+    display: flex;
+    gap: 1rem;
+    align-items:baseline;
+    position: absolute;
+    left: 9rem;
+    bottom: 5rem;
+
+    @media only screen and (max-width: 37.5em) {
+        bottom: -10rem;
+    }
+}
+
+.content__rating--icon{
+    width: 3.2rem;
+    height: 3.2rem;
+}
+
+.content__rating--stars p {
+    margin-top: .5rem;
+    font-size: 1.4rem;
+    color: var(--grey-medium);
+}
+
+.content__rating--stars span {
+    font-weight: 700;
+    color: var(--grey-dark);
+}
+
+/* --------form------ */
+.form {
+    position: relative;
+    text-align: center;
+    max-width: 40rem;
+    padding: 4rem 4rem 2.4rem 4rem;
+    border: 2px solid var(--green);
+    border-radius: 1.6rem;
+    background-color: var(--white);
+    box-shadow: 0 1.5rem 8.3rem 0 rgba(159, 159, 159, 0.12);
+}
+
+.form__bonus {
+    position: absolute;
+    top: -2.3rem;
+    right: 6rem;
+    font-size: 1.6rem;
+    color: var(--white);
+    background-color: var(--green);
+    padding: 1.2rem 1.6rem;
+    border-radius: 4px;
+}
+
+.form__heading {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--grey-dark);
+    margin-bottom: 2.4rem;
+}
+
+.form__input, .form__btn{
+    width: 100%;
+    height: 5.6rem;
+    border-radius: .8rem;
+    font-family: inherit;
+    font-size: 1.6rem;
+}
+
+.form__input{
+    border: 1px solid var(--grey-medium);
+    padding: 1.2rem 1.6rem; 
+    margin-bottom: 1.2rem;
+    color: var(--grey-medium);
+    font-weight: 300;
+    outline: none;
+}
+
+.form__btn{  
+    background-color: var(--orange);
+    border: none;
+    color: var(--white);
+    margin-bottom: 2.4rem;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.form__btn:hover {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.form__social-login{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    font-size: 1.4rem;
+    color: var(--grey-dark);
+}
+
+.form__socials{
+    margin-top: .4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+}
+
+.form__socials--option {
+    border-radius: 3px;
+    border: 1px solid var(--grey-light);
+    padding: 2rem;
+    cursor: pointer;
+}
+
+.form__terms{
+    color: var(--grey-medium);
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+.form__terms span {
+    text-decoration: underline;
+}
+
+.form__user-login {
+    font-size: 1.2rem;
+    color: var(--grey-dark);
+}
+
+.form__user-login span{
+    color: var(--orange);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.form__avatar{
+    position: absolute;
+    right: -10.5rem;
+    bottom: -9.5rem;
+
+    @media only screen and (max-width: 37.5em) {
+        display: none;
+    }
+}
