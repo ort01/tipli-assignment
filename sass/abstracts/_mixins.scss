@@ -1,0 +1,30 @@
+@mixin respond($breakpoint) {
+    @if $breakpoint ==small-phone {
+        //350px : 16px = 22em
+        @media (min-width: 22em) {
+            @content;
+        }
+    }
+
+    @if $breakpoint ==phone {
+        //600px : 16px = 37.5em
+        @media (max-width: 37.5em) {
+            @content;
+        }
+    }
+
+    @if $breakpoint ==tab-port {
+        //1000px : 16px = 62.5em
+        @media (max-width: 62.5em) {
+            @content;
+        }
+    }
+
+    @if $breakpoint ==tab-land {
+        //1500px : 16px = 93.75em
+        //1200px : 16px = 75em
+        @media (max-width: 75em) {
+            @content;
+        }
+    }
+}

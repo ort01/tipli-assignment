@@ -1,0 +1,50 @@
+.rating {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    position: absolute;
+    left: 10.3rem;
+    bottom: 5rem;
+
+    @include respond(tab-land) {
+        left: 15.6rem;
+    }
+
+    @include respond(tab-port) {
+        position: relative;
+        margin: 8rem auto 3rem;
+        left: 0;
+        bottom: 0;
+    }
+
+    @include respond(phone) {
+        position: relative;
+        margin: 0 auto;
+        left: 0;
+        bottom: 0;
+    }
+
+    &__icon {
+        width: 3.2rem;
+        height: 3.2rem;
+    }
+
+    &__stars {
+        & img {
+            width: 2.4rem;
+            height: 2.4rem;
+            margin-top: 0.5rem;
+        }
+
+        & p {
+            margin-top: 0.5rem;
+            font-size: 1.4rem;
+            color: $color-grey-medium;
+        }
+
+        & span {
+            font-weight: 700;
+            color: $color-grey-dark;
+        }
+    }
+}

@@ -1,0 +1,60 @@
+.navbar {
+    padding: 2rem 1rem 1.3rem;
+    border-bottom: 1px solid $color-grey-light;
+
+    @include respond(phone) {
+        width: 100%;
+        padding: 1.5rem 1.6rem;
+    }
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 120rem;
+        margin: 0 auto;
+
+        @include respond(phone) {
+            width: 100%;
+        }
+    }
+
+    &__btns {
+        & a {
+            margin-left: 0.8rem;
+            font-size: 1.6rem;
+            padding: 1.2rem 1.6rem;
+            border-radius: 0.8rem;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+
+            @include respond(phone) {
+                font-size: 1.4rem;
+            }
+        }
+
+        &--login {
+            border: 1px solid $color-grey-dark;
+            transition: all 0.2s;
+
+            &:hover {
+                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                background-color: $color-orange-dark;
+                color: $color-white;
+                border: 1px solid $color-orange-dark;
+            }
+        }
+
+        &--signup {
+            background-color: $color-orange;
+            color: $color-white;
+            transition: all 0.2s;
+
+            &:hover {
+                background-color: $color-orange-dark;
+                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            }
+        }
+    }
+}
