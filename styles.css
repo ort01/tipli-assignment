@@ -339,7 +339,7 @@ a {
     border: 1px solid var(--grey-medium);
     padding: 1.2rem 1.6rem; 
     margin-bottom: 1.2rem;
-    color: var(--grey-medium);
+    color: var(--grey-dark);
     font-weight: 300;
     outline: none;
 }
