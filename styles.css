@@ -101,6 +101,7 @@ a {
     font-size: 1.6rem;
     padding: 1.2rem 1.6rem;
     border-radius: .8rem;
+    user-select: none;
 }
 
 .navbar__btns--login {
@@ -431,7 +432,6 @@ a {
     right: -10.5rem;
     bottom: -9.2rem;
 
-
     @media only screen and (max-width: 37.5em) {
         display: none;
     }
@@ -492,4 +492,15 @@ a {
 .rating__stars span {
     font-weight: 700;
     color: var(--grey-dark);
+}
+
+/* having fun */
+
+::selection{
+    background-color:#ec76006b;
+}
+
+img, button {
+    user-select: none;
+    -webkit-user-drag: none;
 }
