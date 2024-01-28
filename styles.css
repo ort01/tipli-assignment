@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
-/* ----------base-------- */
+/* ---------------base------------ */
 *,
 *::after,
 *::before {
@@ -26,22 +26,22 @@ a {
     font-family: inherit;
 }
 
-
+/* ------------------ media queries settings--------- */
 
     /* tablet - portrait - 1000px : 16px */
-    @media only screen and (max-width: 62.5em) {
+    /* @media only screen and (max-width: 62.5em) {
       
-    }
+    } */
 
     /* tablet - landscape - 1500px : 16px */
-    @media only screen and (max-width: 93.75em) {
+    /* @media only screen and (max-width: 93.75em) {
       
-    }
+    } */
 
     /* phone - 600px : 16px */
-    @media only screen and (max-width: 37.5em) {
+    /* @media only screen and (max-width: 37.5em) {
        
-    }
+    } */
 
 
 
@@ -130,7 +130,6 @@ a {
 
 .main {
     width: 100%;
-
 }
 
 /* ----------page layout------------ */
@@ -170,7 +169,7 @@ a {
     
 }
 
-/* ------------content----------- */
+/* ---------------content------------- */
 
 .content {
     display: flex;
@@ -263,7 +262,7 @@ a {
 }
 
 
-/* --------form------ */
+/* ---------------form--------------- */
 .form {
     position: relative;
     text-align: center;
@@ -444,7 +443,7 @@ a {
 
 }
 
-/* ------------------rating------------ */
+/* ------------------rating--------------- */
 .rating {
     display: flex;
     gap: 1rem;
