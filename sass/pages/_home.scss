@@ -2,22 +2,27 @@
     display: flex;
     flex-direction: column;
     gap: 4rem;
-    padding-bottom: 5rem;
+    // padding-bottom: 5rem;
+    overflow: hidden;
+    padding-top: 7rem;
 
     @include respond(tab-land) {
         width: 43rem;
     }
 
     @include respond(tab-port) {
+        padding-top: 0rem;
+        padding-bottom: 5rem;
         width: -moz-fit-content;
         width: fit-content;
         margin: 0 auto;
+        order: 1;
     }
 
     @include respond(phone) {
         width: 100%;
         margin: 0 auto;
-        padding: 0rem 2rem 3.5rem;
+        padding: 0rem 1.2rem 3.5rem;
     }
 
     &__heading {
