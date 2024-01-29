@@ -1,0 +1,45 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    animation: fadeIn 1s;
+    font-family: "Roboto", sans-serif;
+    font-size: 62.5%; /* 16px = 100%; 10px = 62.5% */
+    background-color: #f8f8f8;
+
+    @include respond(small-phone) {
+        font-size: 45%;
+    }
+}
+
+body {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-family: inherit;
+}
+
+::-moz-selection {
+    background-color: #ec76006b;
+}
+
+::selection {
+    background-color: #ec76006b;
+}
+
+img,
+button {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-drag: none;
+}
