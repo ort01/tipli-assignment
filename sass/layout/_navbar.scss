@@ -11,7 +11,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        max-width: 120rem;
+        max-width: 115rem;
         margin: 0 auto;
 
         @include respond(phone) {

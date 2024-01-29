@@ -9,7 +9,6 @@
     box-shadow: 0 1.5rem 8.3rem 0 rgba(159, 159, 159, 0.12);
 
     @include respond(tab-land) {
-        // max-width: 35rem;
         padding: 4rem 2rem 2.4rem;
     }
 
