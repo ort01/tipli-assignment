@@ -168,14 +168,12 @@ button {
 @media (max-width: 62.5em) {
   .rating {
     margin: 8rem auto 3rem;
-    align-items: center;
     width: fit-content;
     order: 3;
   }
 }
 @media (max-width: 37.5em) {
   .rating {
-    align-items: center;
     width: fit-content;
     margin: 0 auto;
   }

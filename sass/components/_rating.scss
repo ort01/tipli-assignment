@@ -11,13 +11,11 @@
 
     @include respond(tab-port) {
         margin: 8rem auto 3rem;
-        align-items: center;
         width: fit-content;
         order: 3;
     }
 
     @include respond(phone) {
-        align-items: center;
         width: fit-content;
         margin: 0 auto;
     }
